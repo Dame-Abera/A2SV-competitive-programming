@@ -1,0 +1,15 @@
+# Problem: Bitwise XOR of All Pairings - https://leetcode.com/problems/bitwise-xor-of-all-pairings/description/?envType=problem-list-v2&envId=brainteaser
+
+class Solution:
+    def xorAllNums(self, nums1, nums2):
+        c1 = len(nums1)
+        c2 = len(nums2)
+        x1 = 0
+        x2 = 0
+        if c1 % 2 != 0:
+            for i in nums2:
+                x2 ^= i
+        if c2 % 2 != 0:
+            for i in nums1:
+                x1 ^= i
+        return x1 ^ x2
